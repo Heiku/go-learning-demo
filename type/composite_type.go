@@ -1,5 +1,7 @@
 package main
 
+
+// type ->  type aliases
 import "fmt"
 
 type (
@@ -10,7 +12,7 @@ type (
 
 type IntPtr *int
 type Book struct {
-	author,
+	author string
 	title string
 	pages int
 }
