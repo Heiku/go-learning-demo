@@ -26,4 +26,5 @@ func main() {
 
 	fmt.Printf("%T, %T \n", *p0, x) // int, int
 	fmt.Printf("%T, %T \n", p0, p1) // *int, *int
+
 }
