@@ -12,10 +12,16 @@ func main() {
 	fmt.Println("hi!")
 
 	defer func() {
+		// recover collect panic, so before recover can be called
+		fmt.Println("panic before")
+
 		v := recover() // recover() receive panic info and return
 		fmt.Println("panic recover(): ", v)
 	}()
 
+	// panic happened, so main thread exit
 	panic("bye bye !")
+
+	// can't reached
 	fmt.Println("can not reached")
 }
