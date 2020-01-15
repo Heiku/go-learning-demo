@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// select case in nil channel will be blocked,
 func main() {
 	c := make(chan string, 2)
 
