@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	for ; ;  {
+	for {
 		fmt.Println(rand.Intn(10))
 	}
 }

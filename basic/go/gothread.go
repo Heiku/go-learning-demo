@@ -9,8 +9,8 @@ import (
 
 var latch sync.WaitGroup
 
-func sayGreetings(greeting string, times int){
-	for i := 0; i < times; i++{
+func sayGreetings(greeting string, times int) {
+	for i := 0; i < times; i++ {
 		log.Println(greeting)
 
 		d := time.Second * time.Duration(rand.Intn(5)) / 2

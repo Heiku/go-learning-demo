@@ -1,30 +1,29 @@
 package main
 
-
 // type ->  type aliases
 import "fmt"
 
 type (
 	MyInt int
-	Age	int
-	Text string
+	Age   int
+	Text  string
 )
 
 type IntPtr *int
 type Book struct {
 	author string
-	title string
-	pages int
+	title  string
+	pages  int
 }
 type Convert func(i0 int, i1 bool) (out0 int, out1 string)
 type StringArray [5]string
 type StringSlice []string
 
-func f(){
+func f() {
 	// define in func, it only can be used in func
 	type PersonAge map[string]int
 	type MessageQueue chan string
-	type Reader interface{
+	type Reader interface {
 		Read([]byte) int
 	}
 }
