@@ -6,22 +6,18 @@ func quickSort(arr []int, lo, hi int) {
 	if lo >= hi {
 		return
 	}
-
-	j := partition(arr, lo, hi)
-	quickSort(arr, lo, j-1)
-	quickSort(arr, j+1, hi)
+	mid := partition(arr, lo, hi)
+	quickSort(arr, lo, mid-1)
+	quickSort(arr, mid+1, hi)
 }
 
 func partition(arr []int, lo, hi int) int {
-	i := lo
-	j := hi
-	v := arr[lo]
-
+	i, j, v := lo, hi, arr[lo]
 	for {
-		for i < hi && arr[i] <= v {
+		for arr[i] <= v && i < hi {
 			i++
 		}
-		for j > lo && arr[j] >= v {
+		for arr[j] >= v && j > lo {
 			j--
 		}
 		if i >= j {
