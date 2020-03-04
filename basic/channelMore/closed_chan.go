@@ -6,7 +6,8 @@ type T int
 
 func IsClosed(ch <-chan T) bool {
 	select {
-	case <-ch:
+	case v := <-ch:
+		fmt.Println(v)
 		return true
 	default:
 	}

@@ -11,6 +11,9 @@ func main() {
 
 	m["C"] = 1972
 	m["Go"] = 2009
+	m["Java"] = 0
+	m["Erlang"] = 1
+	// automatic expansion
 	fmt.Println(m, len(m))
 
 	// make create slice	// also	 can use new()

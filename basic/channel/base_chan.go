@@ -14,7 +14,7 @@ import (
 // 2.send queue: al coroutine are waiting for sending data in blocking state
 // 3.data buffer queue: circle queue storing actual data, it has cap and len
 
-// sum
+// sumw
 // 1. if chan is closed, wait and send queue are all empty, but buffer queue may has data
 // 2. in anytime, if buffer queue isn't empty, wait queue must be empty(still have data)
 // 3. in anytime, if buffer queue isn't full, send queue must be empty

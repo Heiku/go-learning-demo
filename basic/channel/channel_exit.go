@@ -27,5 +27,4 @@ func main() {
 	stop <- true
 	//为了检测监控过是否停止，如果没有监控输出，就表示停止了
 	time.Sleep(5 * time.Second)
-
 }
