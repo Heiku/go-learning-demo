@@ -22,6 +22,8 @@ func main() {
 	// panic happened, so main thread exit
 	panic("bye bye !")
 
+	// can't catch
+	panic("nono")
 	// can't reached
 	fmt.Println("can not reached")
 }
