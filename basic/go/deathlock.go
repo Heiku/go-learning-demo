@@ -12,7 +12,6 @@ func main() {
 
 	go func() {
 		time.Sleep(time.Second * 2)
-
 		// block current coroutine
 		waitGroup.Wait()
 	}()

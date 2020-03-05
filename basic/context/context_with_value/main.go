@@ -14,9 +14,10 @@ func main() {
 
 	valueCtx := context.WithValue(ctx, key, "[first]")
 	go watch(valueCtx)
+
+	time.Sleep(10 * time.Second)
 	cancel()
 
-	time.Sleep(5 * time.Second)
 }
 
 func watch(ctx context.Context) {

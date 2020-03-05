@@ -17,6 +17,9 @@ func (p Person) PrintName() {
 func (p *Person) SetAge(age int) {
 	p.Age = age
 }
+func (p Person) SetAge2(age int) {
+	p.Age = age
+}
 
 type Singer struct {
 	Person // expend Person method
@@ -29,7 +32,7 @@ func main() {
 	// type Singer can invoke Person method
 	gaga.PrintName()
 	gaga.Name = "Lady GaGa" // also can use Person's fields		gaga.Person.Name(Person can be omitted)
-	gaga.SetAge(31)
+	gaga.SetAge2(31)        // didn't work, need pass the pointer
 	gaga.PrintName()
 
 	fmt.Println(gaga.Age)
