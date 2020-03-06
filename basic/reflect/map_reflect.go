@@ -7,7 +7,7 @@ import (
 
 func main() {
 	valueOf := reflect.ValueOf
-	fmt.Printf("%T valueOf", valueOf)
+	fmt.Printf("%T valueOf \n", valueOf)
 
 	m := map[string]int{
 		"Unix":    1973,

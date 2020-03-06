@@ -30,4 +30,18 @@ func main() {
 
 	ts, ti, tb := tf.In(0), tf.In(1), tf.Out(0) // string int bool
 	fmt.Println(ts.Kind(), ti.Kind(), tb.Kind())
+
+	//printDetail(x)
+}
+
+func printDetail(x interface{}) {
+	tx := reflect.TypeOf(x)
+	fmt.Println(tx.Kind())
+	fmt.Println(tx.Name())
+	if tx.NumField() > 1 {
+		for k := 0; k < tx.NumField(); k++ {
+			f := tx.Field(k)
+			printDetail(f)
+		}
+	}
 }

@@ -20,6 +20,7 @@ func main() {
 	map[2]=3
 	map[3]=3
 	*/
+
 }
 
 func prtMap(myMap map[int]*int) {

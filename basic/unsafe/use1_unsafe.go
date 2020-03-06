@@ -10,6 +10,7 @@ func main() {
 	type MyString string
 	ms := []MyString{"C", "C++", "Go"}
 	fmt.Printf("%s\n", ms)
+	ms[2] = "Python"
 
 	// ss := ([]string)ms	 compile failed
 	ss := *(*[]string)(unsafe.Pointer(&ms))

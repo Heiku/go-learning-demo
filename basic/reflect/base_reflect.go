@@ -10,8 +10,8 @@ func main() {
 	var c <-chan map[A][]byte // chan(map(key:A, value:[]byte))
 
 	tc := reflect.TypeOf(c)
-	fmt.Println(tc.Kind())    // chan
-	fmt.Println(tc.ChanDir()) // <-chan
+	fmt.Println(tc.Kind() == reflect.Chan) // chan
+	fmt.Println(tc.ChanDir())              // <-chan
 
 	tm := tc.Elem()
 	ta, tb := tm.Key(), tm.Elem()
@@ -21,7 +21,7 @@ func main() {
 	fmt.Println(tx.Kind(), ty.Kind()) // int16 uint8(byte)
 	fmt.Println(tx.Bits(), ty.Bits()) // 16, 8
 	fmt.Println(tx.ConvertibleTo(ty)) // true
-	fmt.Println(tb.ConvertibleTo(ta)) // false
+	fmt.Println(ty.ConvertibleTo(tx)) // true
 
 	fmt.Println(tm.Comparable()) // false
 	fmt.Println(tb.Comparable()) // false

@@ -9,9 +9,9 @@ func main() {
 	var helloworld = "hello-world"
 
 	var hello = helloworld[:5]
-	fmt.Println(hello[0])         // h unicode code = 104
+	fmt.Println(hello[0]) // h unicode code = 104
+	fmt.Println(string(hello[0]))
 	fmt.Printf("%T \n", hello[0]) // uint8
-
 	// can't compile (it mean underlay array can not be changed)
 	// hello[0] = 'H'
 	// fmt.Println(&hello[0])

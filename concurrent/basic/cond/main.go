@@ -18,6 +18,7 @@ func main() {
 	isReady := false
 
 	for i := 0; i < 10; i++ {
+		// every
 		i := i
 		go func() {
 			m.Lock()
