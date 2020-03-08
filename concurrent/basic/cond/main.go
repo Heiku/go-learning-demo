@@ -18,8 +18,8 @@ func main() {
 	isReady := false
 
 	for i := 0; i < 10; i++ {
-		// every
 		i := i
+		// every coroutine done and wait
 		go func() {
 			m.Lock()
 

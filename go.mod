@@ -22,6 +22,8 @@ require (
 	github.com/jonboulle/clockwork v0.1.0 // indirect
 	github.com/json-iterator/go v1.1.9 // indirect
 	github.com/marusama/cyclicbarrier v0.0.0-20181027101648-08d457ab265c
+	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
+	github.com/modern-go/reflect2 v1.0.1 // indirect
 	github.com/petermattis/goid v0.0.0-20180202154549-b0b1615b78e5
 	github.com/prometheus/client_golang v1.3.0 // indirect
 	github.com/soheilhy/cmux v0.1.4 // indirect

@@ -19,8 +19,8 @@ func main() {
 			wg.Done()
 		}()
 	}
-	//wg.Done()
-	wg.Wait()
+	wg.Done()
+	//wg.Wait()
 	wg.Wait()
 	fmt.Println(atomic.LoadInt64(&count))
 }

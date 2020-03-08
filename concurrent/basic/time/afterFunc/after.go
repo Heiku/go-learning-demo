@@ -14,5 +14,8 @@ func main() {
 	// When the Timer expires, the current time will be sent on C except AfterFunc
 	// so chan is empty, t = nil
 	t := <-timer.C
+	/*	t := time.NewTimer(time.Second)
+		a := <-t.C*/
+
 	log.Printf("fired at %s", t.String())
 }
